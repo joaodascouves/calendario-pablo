@@ -1,17 +1,23 @@
+// o "entrypoint" do nodeJS é o arquivo index.js
+// eh o equivalente ao main.c do C
+
+// esse index.js é basicamente um boilerplate
+// ou seja, um código q raramente vai mudar
+// vc so precisa decorar ele e reusar toda vez
+
+// deps do react
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+
+// a tela principal do aplicativo
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+    (
+        <React.StrictMode>
+            <App />
+        </React.StrictMode>
+    ),
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+    document.getElementById('root')
+);
